@@ -394,35 +394,20 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(0, 
                  [
                 InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
-            btn.insert(1,
-                       [
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
-               # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-            )
+            
 
         else:
             btn.insert(0, 
                  [
                 InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
-            btn.insert(1, 
-                 [
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
-               # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-            )
+            
                 
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
                  [
                 InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
-        btn.insert(1, 
-                 [
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
-               # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-            )
+        
 
     # btn.insert(0, [
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
@@ -448,11 +433,15 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             [InlineKeyboardButton(text="𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄",callback_data="pages")]
         )
     # if ENABLE_SHORTLINK == True:
-    btn.insert(0, [
+    btn.insert(1, [
         InlineKeyboardButton("Bᴏᴛ Pᴍ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("Sᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}")
-        ])
-    # else:
+            InlineKeyboardButton("Sᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
+               # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+            ]
+                      )
+    
+   # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
     #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{key}#{offset}")
