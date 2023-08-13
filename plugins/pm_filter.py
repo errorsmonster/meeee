@@ -145,9 +145,13 @@ async def next_page(bot, query):
         
         btn.insert(0, [
             InlineKeyboardButton("Bᴏᴛ Pᴍ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("Sᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}")
-          #  InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
+            InlineKeyboardButton("Sᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
 ])
+        btn.insert(0, 
+                 [
+                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+            
     else:
         btn = []
     try:
