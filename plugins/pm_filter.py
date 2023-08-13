@@ -53,7 +53,7 @@ async def give_filter(client, message):
             settings = await get_settings(message.chat.id)
             try:
                 if settings['auto_ffilter']:
-                    await auto_filter(client,query, message)
+                    await auto_filter(client, message)
             except KeyError:
                 grpid = await active_connection(str(message.from_user.id))
                 await save_group_settings(grpid, 'auto_ffilter', True)
@@ -1742,8 +1742,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     await query.answer(MSG_ALRT)
 
     
-async def auto_filter(client, msg, query, spoll=False):
-    curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+async def auto_filter(client, msg, spoll=False):
+    curr_time = datetime.now(pytz.timezopne('Asia/Kolkata')).time()
     # reqstr1 = msg.from_user.id if msg.from_user else 0
     # reqstr = await client.get_users(reqstr1)
     
@@ -1918,7 +1918,7 @@ async def auto_filter(client, msg, query, spoll=False):
     #     )
     # else:
     if settings["button"]:
-        cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ {query.from_user.mention}\n\nFᴏᴜɴᴅ {total} ʀᴇsᴜʟᴛ ɪɴ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ  :  <b><a href=\"https://telegram.me/filmztube\">FILMZTUBE</a></b> \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ \n\n</b>"
+        cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ {message.from_user.mention}\n\nFᴏᴜɴᴅ {total} ʀᴇsᴜʟᴛ ɪɴ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ  :  <b><a href=\"https://telegram.me/filmztube\">FILMZTUBE</a></b> \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ \n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
