@@ -43,7 +43,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb://Bharath:bharath@ac-yzr3qto-shard-00-00.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-01.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-02.jsqhpvb.mongodb.net:27017/?ssl=true&replicaSet=atlas-10hwrx-shard-0&authSource=admin&retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb://bharath:bharath@ac-yzr3qto-shard-00-00.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-01.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-02.jsqhpvb.mongodb.net:27017/?ssl=true&replicaSet=atlas-10hwrx-shard-0&authSource=admin&retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "bharath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Movies_file')
 
