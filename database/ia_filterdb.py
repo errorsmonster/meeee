@@ -1,3 +1,6 @@
+import os
+import asyncio
+import json
 import logging
 from struct import pack
 import re
@@ -32,9 +35,25 @@ class Media(Document):
         indexes = ('$file_name', )
         collection_name = COLLECTION_NAME
 
+skip_value = {
+    "skip_series": True
+}
+
+def get_skip_series():
+    return skip_value["skip_series"]
+
+def set_skip_series(value):
+    skip_value["skip_series"] = value
+
 
 async def save_file(media):
     """Save file in database"""
+    skip_series = get_skip_series()
+    # Skip saving if the file is part of a series
+    if skip_series and is_file_part_of_series(media):
+        logger.info(f'Skipping series file: {getattr(media, "file_name", "NO_FILE")}')
+        return False, 3
+
 
     # TODO: Find better way to get same file_id for same media to avoid duplicates
     file_id, file_ref = unpack_new_file_id(media.file_id)
@@ -203,3 +222,20 @@ def unpack_new_file_id(new_file_id):
     )
     file_ref = encode_file_ref(decoded.file_reference)
     return file_id, file_ref
+
+def is_file_part_of_series(media):
+    """Check if the file is part of a series"""
+    #file_name = getattr(media, "file_name", "").strip()
+    file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
+    
+    pattern = r"(?i)(^|\W)(S|E)(\d+)(\b(?!\d)|(?=\D)|(?<=\d)(?=\D))"
+    #pattern = r"(?i)(^|\W)(S|E)\d+"
+    
+
+    # Check if the pattern matches the file name
+    if re.search(pattern, file_name):
+        #logger.warning(f'{file_name} is a series episode, skipping')
+        return True
+
+
+    return False
