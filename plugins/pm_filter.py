@@ -395,6 +395,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                  [
                 InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
             btn.insert(1,
+                       [
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
                # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
@@ -414,12 +415,14 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
-             [
-                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")],[
+                 [
+                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+            btn.insert(1, 
+                 [
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
                # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
+            )
 
     # btn.insert(0, [
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
