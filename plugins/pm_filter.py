@@ -76,8 +76,8 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/Action_Movies_Group>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/+4nzja42ELQwzOWVl")]])
+         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/filmztube_official>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/filmztube_official")]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -150,7 +150,7 @@ async def next_page(bot, query):
 ])
         btn.insert(0, 
                  [
-                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+                InlineKeyboardButton(f'🤩 ғᴏʀ ᴅɪʀᴇᴄᴛ ғɪʟᴇs', url="https://t.me/filmztube_openlink/29")])
             
     else:
         btn = []
@@ -397,20 +397,20 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         if settings['auto_delete']:
             btn.insert(0, 
                  [
-                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+                InlineKeyboardButton(f'🤩 ғᴏʀ ᴅɪʀᴇᴄᴛ ғɪʟᴇs', url="https://t.me/filmztube_openlink/29")])
             
 
         else:
             btn.insert(0, 
                  [
-                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+                InlineKeyboardButton(f'🤩 ғᴏʀ ᴅɪʀᴇᴄᴛ ғɪʟᴇs', url="https://t.me/filmztube_openlink/29")])
             
                 
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
                  [
-                InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
+                InlineKeyboardButton(f'🤩 ғᴏʀ ᴅɪʀᴇᴄᴛ ғɪʟᴇs', url="https://t.me/filmztube_openlink/29")])
         
 
     # btn.insert(0, [
@@ -1821,7 +1821,7 @@ async def auto_filter(client, msg, spoll=False):
     #         for file in files
     #     ]
         btn.insert(0, [
-    InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")
+    InlineKeyboardButton(f'🤩 ғᴏʀ ᴅɪʀᴇᴄᴛ ғɪʟᴇs', url="https://t.me/filmztube_openlink/29")
 ])
 
         
