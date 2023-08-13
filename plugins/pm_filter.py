@@ -417,7 +417,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn.insert(0, 
                  [
                 InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")])
-            btn.insert(1, 
+        btn.insert(1, 
                  [
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")#,
                # InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
