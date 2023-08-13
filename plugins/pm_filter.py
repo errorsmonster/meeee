@@ -1830,7 +1830,7 @@ async def auto_filter(client, msg, spoll=False):
     InlineKeyboardButton(f'🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url="https://t.me/filmztube_openlink/32")
 ])
 
-btn.insert(1, [
+        btn.insert(1, [
     InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
 ])
 
@@ -1845,7 +1845,7 @@ btn.insert(1, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
     #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}")
     #     ])
-        btn.insert(0, [
+        btn.insert(3, [
             InlineKeyboardButton("Bᴏᴛ Pᴍ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("Sᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}")
         ])
