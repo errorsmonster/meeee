@@ -50,9 +50,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Movies_file')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'lVSWhw4wnGaKDSDltbmcmYGQlkK2')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'shareus.io')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'api.shareus.io')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'lVSWhw4wnGaKDSDltbmcmYGQlkK2')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
