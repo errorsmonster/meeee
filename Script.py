@@ -220,11 +220,9 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
-⚡ɴᴀᴍᴇ: <code>{file_name}</code>
+<b>⚡{file_name}
 
- SIZE: <code>{file_size}</code> 
-  
- ᴊᴏɪɴ ɴᴏᴡ:<b> [Filmztube ⎚](https://t.me/Filmztube)</b>"""
+ᴊᴏɪɴ ɴᴏᴡ: [Filmztube ⎚](https://t.me/Filmztube)</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
