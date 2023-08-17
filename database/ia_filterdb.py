@@ -46,12 +46,6 @@ def get_skip_series():
 def set_skip_series(value):
     skip_value["skip_series"] = value
 
-skip_series = get_skip_series()
-
-@Client.on_message(filters.command('setsskip') )
-async def sikpstat(bot, message):
-    
-    await message.reply_text(f"current skip stats {skip_series}")
 
 async def save_file(media):
     """Save file in database"""
