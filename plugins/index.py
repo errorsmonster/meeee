@@ -158,7 +158,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                     can = [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
                     reply = InlineKeyboardMarkup(can)
                     await msg.edit_text(
-                        text=f"Total messages fetched: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nSeries Episodes skipped: <code>{series_skip}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>",
+                        text=f"test = {skip_series}\nTotal messages fetched: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nSeries Episodes skipped: <code>{series_skip}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>",
                         reply_markup=reply)
                 if message.empty:
                     deleted += 1
@@ -181,7 +181,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                 
                 if skip_series and is_file_part_of_series(media):
                     series_skip += 1
-                    await bot.send_message(query.message.from_user.id, f"Current value of skip_series: {skip_series}")
+                   # await bot.send_message(query.message.from_user.id, f"Current value of skip_series: {skip_series}")
                 #else:
                   #  series_skip = "Not Enabled"
 
