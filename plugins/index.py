@@ -144,7 +144,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
     no_media = 0
     unsupported = 0
     #series_skipped = 0
-    series_skip = "Not Enabled"
+    series_skip = 0
     async with lock:
         try:
             current = temp.CURRENT
