@@ -16,6 +16,12 @@ lock = asyncio.Lock()
 
 #skip_series = skip_value["skip_series"]
 skip_series = get_skip_series()
+
+@Client.on_message(filters.command('setssskip') )
+async def sikpstats(bot, message):
+    
+    await message.reply_text(f"current skip stats {skip_value}")
+
 @Client.on_callback_query(filters.regex(r'^index'))
 async def index_files(bot, query):
     if query.data.startswith('index_cancel'):
