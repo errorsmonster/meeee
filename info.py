@@ -42,6 +42,7 @@ reqst_channel = environ.get('REQST_CHANNEL_ID','-1001943990782')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
+ 
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb://bharath:bharath@ac-yzr3qto-shard-00-00.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-01.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-02.jsqhpvb.mongodb.net:27017/?ssl=true&replicaSet=atlas-10hwrx-shard-0&authSource=admin&retryWrites=true&w=majority")
@@ -67,7 +68,8 @@ MSG_ALRT = environ.get('MSG_ALRT', '❤ ᴊᴏɪɴ @FILMZTUBE ❤')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001943990782))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'filmz_tube')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/filmztube_openlink/39')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/filmztube_openlink/34')
+BUY_PREMIUM = environ.get('TUTORIAL', 'https://t.me/filmztube_openlink/29')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
