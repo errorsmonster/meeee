@@ -13,12 +13,12 @@ import re
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
-
+skip_series = get_skip_series()
 #skip_series = skip_value["skip_series"]
 @Client.on_message(filters.command('skip1') )
 
 async def sikpstat(bot, message):
-    skip_series = get_skip_series()
+    
     await message.reply_text(f"current skip stats {skip_series}")
 
                                             
