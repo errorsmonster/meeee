@@ -49,6 +49,7 @@ async def handle_callback(bot, callback_query):
     await callback_query.message.edit_text("🎈 ᴅᴏɴᴇ!\n\n✖️sᴋɪᴘᴘɪɴɢ sᴇʀɪᴇs ᴅɪsᴀʙʟᴇᴅ\n\n🗂sᴇʀɪᴇs ᴡɪʟʟ ɴᴏᴛ ɢᴇᴛ sᴋɪᴘᴘᴇᴅ ᴡʜᴇɴ ɪɴᴅᴇxɪɴɢ" if skip_series else "🎈 ᴅᴏɴᴇ!\n\n✔️sᴋɪᴘᴘɴɢ sᴇʀɪᴇs ᴇɴᴀʙʟᴇᴅ \n\n🗂sᴇʀɪᴇs ᴡɪʟʟ ɢᴇᴛ sᴋɪᴘᴘᴇᴅ ᴡʜᴇɴ ɪɴᴅᴇxɪɴɢ")
 
 @Client.on_message(filters.command('skip') )
+skip_series = get_skip_series()
 async def sikpstat(bot, message):
     await message.reply_text(f"current skip stats {skip_series}")
         
