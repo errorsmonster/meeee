@@ -144,7 +144,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
     no_media = 0
     unsupported = 0
     #series_skipped = 0
-    series_skip = 0
+    series_skip = "Not Enabled"
     async with lock:
         try:
             current = temp.CURRENT
@@ -178,10 +178,11 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                 '''if is_file_part_of_series(media):
                     series_skipped += 1
                     series_skip = series_skipped if skip_series else "Not Enabled"'''
+                
                 if skip_series and is_file_part_of_series(media):
                     series_skip += 1
-                else:
-                    series_skip = "Not Enabled"
+                #else:
+                  #  series_skip = "Not Enabled"
 
                     continue
                 media.file_type = message.media.value
