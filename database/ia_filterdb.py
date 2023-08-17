@@ -49,7 +49,7 @@ def set_skip_series(value):
 @Client.on_message(filters.command('setsskip') )
 async def set_skip_number(bot, message):
     
-    await message.reply("Give me a skip number {skip_value}")
+    await message.reply(f"current skip stats {skip_value}")
 
 async def save_file(media):
     """Save file in database"""
