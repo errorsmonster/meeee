@@ -180,7 +180,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                     series_skip = series_skipped if skip_series else "Not Enabled"'''
                 
                 if skip_series and is_file_part_of_series(media):
-                    series_skip += 1
+                    series_skip ="series_skip + 1"
                 #else:
                   #  series_skip = "Not Enabled"
 
