@@ -50,7 +50,7 @@ async def handle_callback(bot, callback_query):
 
 @Client.on_message(filters.command('skip') )
 async def sikpstat(bot, message):
-    await message.reply_text(f"current skip stats {skip_series}")
+    await message.reply_text(f"current skip stats {skip_series}")
         
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
 # https://t.me/GetTGLink/4178
