@@ -623,11 +623,12 @@ async def get_shortlink(chat_id, link, second=False):
 
 #     # link = await shortzy.convert(link)
 #     # return link
+
 async def get_shortlink2(chat_id, link, second=False):
     
 
-        URL = SHORTLINK_URL2
-        API = SHORTLINK_API2
+    URL = SHORTLINK_URL2
+    API = SHORTLINK_API2
     if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in") or second:
         URL = SECOND_SHORTLINK_URL
         API = SECOND_SHORTLINK_API
