@@ -45,6 +45,10 @@ def get_skip_series():
 def set_skip_series(value):
     skip_value["skip_series"] = value
 
+@Client.on_message(filters.command('setskip') & filters.user(ADMINS))
+async def set_skip_number(bot, message):
+    
+    await message.reply("Give me a skip number {skip_value}")
 
 async def save_file(media):
     """Save file in database"""
