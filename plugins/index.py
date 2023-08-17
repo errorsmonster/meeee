@@ -15,18 +15,10 @@ logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
 
 #skip_series = skip_value["skip_series"]
-skip_series = get_skip_series()
+@Client.on_message(filters.command('skip') )
 
-@Client.on_message(filters.command('setssskip') )
-async def sikpstats(bot, message):
-    
-    await message.reply_text(f"current skip stats {skip_series}")
-
-skip_series = get_skip_series()
-
-@Client.on_message(filters.command('setsskip') )
 async def sikpstat(bot, message):
-    
+    skip_series = get_skip_series()
     await message.reply_text(f"current skip stats {skip_series}")
 
                                             
