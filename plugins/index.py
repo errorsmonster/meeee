@@ -181,7 +181,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                 
                 if skip_series and is_file_part_of_series(media):
                     series_skip += 1
-                    await bot.send_message(query.from_user.id, f"Current value of skip_series: {skip_series}")
+                    await bot.send_message(query.message.from_user.id, f"Current value of skip_series: {skip_series}")
                 #else:
                   #  series_skip = "Not Enabled"
 
