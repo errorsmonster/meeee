@@ -129,15 +129,19 @@ Nᴀᴍᴇ - {}"""
 
 ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ 😃
 
-ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
+<a href=https://t.me/filmztube_openlink/33> ᴍᴜsᴛ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ғᴀʀᴍᴇᴛ </a>
 
-ᴇxᴀᴍᴘʟᴇ : Uncharted or Uncharted 2022 or Uncharted En
+STILL NOT FOUND? YOU CAN GET IT BY REQUESTING ➤
+    
+𝗥𝗘𝗤𝗨𝗘𝗦𝗧𝗜𝗡𝗚 𝗙𝗢𝗥𝗠 :
 
-ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
+<code>#request
+Name : 
+Year :
+Quality :
+Language : </code>
 
-ᴇxᴀᴍᴘʟᴇ : Loki S01 or Loki S01E04 or Lucifer S03E24
-
-🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)</b>"""
+⚠️ Click on FORM to copy it and fill and send here.</b>"""
 
     I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ɴᴀᴍᴇᴅ  {}.
 ᴘʟᴇᴀꜱᴇ ᴄᴏᴍғɪʀᴍ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ..."""
@@ -147,11 +151,14 @@ Nᴀᴍᴇ - {}"""
 BUT YOU CAN GET IT BY REQUESTING ➤
     
 𝗥𝗘𝗤𝗨𝗘𝗦𝗧𝗜𝗡𝗚 𝗙𝗢𝗥𝗠 :
+
 <code>#request
 Name : 
 Year :
 Quality :
-Language : </code>"""
+Language : </code>
+
+⚠️ Click on FORM to copy it and fill and send here"""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Fɪʟᴍᴢᴛᴜʙᴇ ⎚ Dᴀᴛᴀʙᴀsᴇ..."""
 
