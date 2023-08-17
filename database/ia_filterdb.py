@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters,enums
 import os
 import asyncio
 import json
@@ -49,7 +49,7 @@ def set_skip_series(value):
 @Client.on_message(filters.command('setsskip') )
 async def sikpstats(bot, message):
     
-    await message.reply_text(f"current skip stats {skip_value}")
+    await message.reply_text(f"current skip stats {value}")
 
 async def save_file(media):
     """Save file in database"""
