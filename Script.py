@@ -235,9 +235,9 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
-<b>⚡{file_name}
+<b><code>{file_name}</code>
 
-ᴊᴏɪɴ ɴᴏᴡ: [Filmztube ⎚](https://t.me/Filmztube)</b>"""
+ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [Filmztube BOT](https://t.me/Filmztube_BOT)</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
