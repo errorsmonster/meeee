@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
 
-skip_series = skip_value["skip_series"]
+#skip_series = skip_value["skip_series"]
 skip_series = get_skip_series()
 @Client.on_callback_query(filters.regex(r'^index'))
 async def index_files(bot, query):
