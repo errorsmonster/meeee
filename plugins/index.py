@@ -18,7 +18,7 @@ skip_series = get_skip_series()
 @Client.on_message(filters.command('skip1') )
 
 async def sikpstat(bot, message):
-    
+    skip_series = get_skip_series()
     await message.reply_text(f"current skip stats {skip_series}")
 
                                             
@@ -152,6 +152,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
     unsupported = 0
     #series_skipped = 0
     series_skip = 0
+    skip_series = get_skip_series()
     async with lock:
         try:
             current = temp.CURRENT
