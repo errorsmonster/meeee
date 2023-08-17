@@ -6,7 +6,7 @@ from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdmin
 from info import ADMINS
 from info import INDEX_REQ_CHANNEL as LOG_CHANNEL
 #from database.ia_filterdb import save_file
-from database.ia_filterdb import save_file, is_file_part_of_series, skip_value
+from database.ia_filterdb import save_file, is_file_part_of_series, get_skip_series
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from utils import temp
 import re
@@ -15,6 +15,7 @@ logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
 
 skip_series = skip_value["skip_series"]
+skip_series = get_skip_series()
 @Client.on_callback_query(filters.regex(r'^index'))
 async def index_files(bot, query):
     if query.data.startswith('index_cancel'):
