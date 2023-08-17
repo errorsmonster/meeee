@@ -1,3 +1,4 @@
+from pyrogram import Client, filters
 import os
 import asyncio
 import json
@@ -45,7 +46,7 @@ def get_skip_series():
 def set_skip_series(value):
     skip_value["skip_series"] = value
 
-@client.on_message(filter.command('setsskip') )
+@Client.on_message(filters.command('setsskip') )
 async def set_skip_number(bot, message):
     
     await message.reply("Give me a skip number {skip_value}")
