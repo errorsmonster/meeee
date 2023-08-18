@@ -37,7 +37,7 @@ class Media(Document):
         collection_name = COLLECTION_NAME
 
 skip_value = {
-    "skip_series": True
+    "skip_series" : False
 }
 
 def get_skip_series():
