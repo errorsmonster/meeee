@@ -1369,7 +1369,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, from_user = query.data.split("#")
         if int(query.from_user.id) == int(from_user):
             user = await client.get_users(from_user)
-            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ ʀᴇǫᴜᴇsᴛ ғᴏʀᴍ ɪs ᴡʀᴏɴɢ ᴜsᴇ ᴛʜɪs ➤\n\n #request\nName : \nYear :\nQuality :\nLanguage : ", show_alert=True)
+            await query.answer(f"Hᴇʏ {user.first_name}, Yᴏᴜʀ ʀᴇǫᴜᴇsᴛ ғᴏʀᴍ ɪs ᴡʀᴏɴɢ, ᴜsᴇ ᴛʜɪs ➤\n\n #request\nName : \nYear :\nQuality :\nLanguage : ", show_alert=True)
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
  
