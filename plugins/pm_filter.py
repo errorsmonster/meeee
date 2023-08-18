@@ -1789,14 +1789,14 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
            # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-            m = await message.reply_text(f"<b> Searching for <code>'{search}'</code> 🔎</b>")
+            m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
             
             async def update_searching_text():
                 while True:
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(2)
                     if m:
                         current_time = datetime.now().time()
-                        dots = '.' * ((current_time.second % 5) + 1)
+                        dots = '●' * ((current_time.second % ) + 1)
                         content = f"<b>Searching for <code>'{search}'</code>{dots}</b>"
                         await m.edit_text(content)
                     else:
@@ -1834,13 +1834,13 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
        # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-        m = await message.reply_text(f"<b> Searching for <code>'{search}'</code> 🔎</b>")
+        m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
         async def update_searching_text():
             while True:
-                await asyncio.sleep(1)
+                await asyncio.sleep(2)
                 if m:
                     current_time = datetime.now().time()
-                    dots = '.' * ((current_time.second % 5) + 1)
+                    dots = '●' * ((current_time.second % 4) + 1)
                     content = f"<b> Searching for <code>'{search}'</code>{dots}</b>"
                     await m.edit_text(content)
                 else:
