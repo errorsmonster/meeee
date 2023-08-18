@@ -22,7 +22,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN',"6457189325:AAEdGDwKcHJeMO0i-bo2Mi1bXzY1PV20
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', 'https://graph.org/file/8faa88f9046f3f901e174.mp4')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/8563455b643275f11b8a7.jpg https://graph.org/file/87df8a16959360259df44.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/46443096bc6895c74a716.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/8faa88f9046f3f901e174.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
@@ -38,7 +38,7 @@ auth_grp = environ.get('AUTH_GROUP','')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID','-1001913614788')
-reqst_channel = environ.get('REQST_CHANNEL_ID','-1001943990782')
+reqst_channel = environ.get('REQST_CHANNEL_ID','-1001775690369')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
