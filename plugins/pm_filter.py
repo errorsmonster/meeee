@@ -1795,7 +1795,7 @@ async def auto_filter(client, msg, spoll=False):
                 while True:
                     await asyncio.sleep(1)
                     if m:
-                        dots = '.' * ((await asyncio.to_thread(datetime.time)) % 4 + 1)
+                        dots = '.' * ((await asyncio.to_thread(time)) % 5 + 1)
                         content = f"<b>Searching for <code>'{search}'</code>{dots}</b>"
                         await m.edit_text(content)
                     else:
@@ -1838,7 +1838,7 @@ async def auto_filter(client, msg, spoll=False):
             while True:
                 await asyncio.sleep(1)
                 if m:
-                    dots = '.' * ((await asyncio.to_thread(datetime.time)) % 5 + 1)
+                    dots = '.' * ((await asyncio.to_thread(time)) % 5 + 1)
                     content = f"<b> Searching for <code>'{search}'</code>{dots}</b>"
                     await m.edit_text(content)
                 else:
