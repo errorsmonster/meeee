@@ -1796,7 +1796,7 @@ async def auto_filter(client, msg, spoll=False):
                     await asyncio.sleep(2)
                     if m:
                         current_time = datetime.now().time()
-                        dots = '●' * ((current_time.second % ) + 1)
+                        dots = '●' * ((current_time.second % 4) + 1)
                         content = f"<b>Searching for <code>'{search}'</code>{dots}</b>"
                         await m.edit_text(content)
                     else:
