@@ -6,6 +6,7 @@ import math
 import random
 import pytz
 from datetime import datetime, timedelta, date, time
+
 lock = asyncio.Lock()
 
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
@@ -1788,14 +1789,14 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
            # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-            m = await message.reply_text(f"<b><i> Searching for '{search}' 🔎</i></b>")
+            m = await message.reply_text(f"<b> Searching for <code>'{search}'</code> 🔎</b>")
             
             async def update_searching_text():
                 while True:
                     await asyncio.sleep(1)
                     if m:
-                        dots = '.' * ((await asyncio.to_thread(time.time)) % 4 + 1)
-                        content = f"<b><i> Searching for '{search}'{dots}</i></b>"
+                        dots = '.' * ((await asyncio.to_thread(datetime.time)) % 4 + 1)
+                        content = f"<b>Searching for <code>'{search}'</code>{dots}</b>"
                         await m.edit_text(content)
                     else:
                         break
@@ -1832,13 +1833,13 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
        # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-        m = await message.reply_text(f"<b><i> Searching for '{search}' 🔎</i></b>")
+        m = await message.reply_text(f"<b> Searching for <code>'{search}'</code> 🔎</b>")
         async def update_searching_text():
             while True:
                 await asyncio.sleep(1)
                 if m:
-                    dots = '.' * ((await asyncio.to_thread(time.time)) % 4 + 1)
-                    content = f"<b><i> Searching for '{search}'{dots}</i></b>"
+                    dots = '.' * ((await asyncio.to_thread(datetime.time)) % 5 + 1)
+                    content = f"<b> Searching for <code>'{search}'</code>{dots}</b>"
                     await m.edit_text(content)
                 else:
                     break
