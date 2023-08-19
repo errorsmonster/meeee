@@ -1692,7 +1692,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-    elif query.data.startswith("slowdown"):
+    elif query.data == "slowdown":
+        logging.debug("Slowdown callback executed")
+        
         await query.answer(text="ʙᴇᴄᴀᴜsᴇ ᴏғ ʟᴀɢᴛᴇ ғɪʟᴇs ɪɴ ᴅᴀᴛᴀʙᴀsᴇ,🙏\nʙᴏᴛ ɪs ʙɪᴛ sʟᴏᴡ" , show_alert=True)
 
     elif query.data.startswith("setgs"):
@@ -1807,7 +1809,7 @@ async def auto_filter(client, msg, spoll=False):
             asyncio.ensure_future(update_searching_text())"""
             stick_id = "CAACAgUAAxkBAAEKEYZk4J0-GB_7BmQYfIWeNtgfq58qaQACcQoAAlNcAVdwoFjRt6KnvDAE"
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton(f"sᴇᴀʀᴄʜɪɴɢ... {search}", callback_data="hiding")]]
+                [[InlineKeyboardButton(f"sᴇᴀʀᴄʜɪɴɢ... {search}", callback_data="slowdown")]]
             )
             m = await message.reply_sticker(sticker=stick_id, reply_markup=keyboard)
             search = search.lower()
