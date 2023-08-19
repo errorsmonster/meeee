@@ -1692,7 +1692,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-    elif query.data == "slowdown":
+    elif query.data.startwith("slowdown"):
         await query.answer(text="ʙᴇᴄᴀᴜsᴇ ᴏғ ʟᴀɢᴛᴇ ғɪʟᴇs ɪɴ ᴅᴀᴛᴀʙᴀsᴇ,🙏\nʙᴏᴛ ɪs ʙɪᴛ sʟᴏᴡ" , show_alert=True)
 
     elif query.data.startswith("setgs"):
