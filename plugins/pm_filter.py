@@ -1805,7 +1805,7 @@ async def auto_filter(client, msg, spoll=False):
                         break
             
             asyncio.ensure_future(update_searching_text())"""
-            stick_id = random.choice(stickers)
+            stick_id = "CAACAgUAAxkBAAEKEYZk4J0-GB_7BmQYfIWeNtgfq58qaQACcQoAAlNcAVdwoFjRt6KnvDAE"
             keyboard = InlineKeyboardMarkup(
                 [[InlineKeyboardButton(f"sᴇᴀʀᴄʜɪɴɢ... {search}", callback_data="hiding")]]
             )
