@@ -1692,6 +1692,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
+    elif query.data == "slowdown":
+        await query.answer(text="ʙᴇᴄᴀᴜsᴇ ᴏғ ʟᴀɢᴛᴇ ғɪʟᴇs ɪɴ ᴅᴀᴛᴀʙᴀsᴇ,🙏\nʙᴏᴛ ɪs ʙɪᴛ sʟᴏᴡ" , show_alert=True)
 
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
@@ -1789,7 +1791,7 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
            # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-            m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
+            """m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
             
             async def update_searching_text():
                 while True:
@@ -1802,7 +1804,12 @@ async def auto_filter(client, msg, spoll=False):
                     else:
                         break
             
-            asyncio.ensure_future(update_searching_text())
+            asyncio.ensure_future(update_searching_text())"""
+            stick_id = random.choice(stickers)
+            keyboard = InlineKeyboardMarkup(
+                [[InlineKeyboardButton(f"sᴇᴀʀᴄʜɪɴɢ... {search}", callback_data="hiding")]]
+            )
+            m = await message.reply_sticker(sticker=stick_id, reply_markup=keyboard)
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -1834,7 +1841,7 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
        # m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
-        m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
+        """m = await message.reply_text(f"<b> Searching for <code>'{search}'</code></b>")
         async def update_searching_text():
             while True:
                 await asyncio.sleep(2)
@@ -1846,7 +1853,12 @@ async def auto_filter(client, msg, spoll=False):
                 else:
                     break
             
-        asyncio.ensure_future(update_searching_text())
+        asyncio.ensure_future(update_searching_text())"""
+        stick_id = "CAACAgUAAxkBAAEKEYZk4J0-GB_7BmQYfIWeNtgfq58qaQACcQoAAlNcAVdwoFjRt6KnvDAE"
+        keyboard = InlineKeyboardMarkup(
+             [[InlineKeyboardButton(f"sᴇᴀʀᴄʜɪɴɢ... {search}", callback_data="slowdown")]]
+        )
+        m = await message.reply_sticker(sticker=stick_id, reply_markup=keyboard)
         
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
