@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID'))
-API_HASH = environ.get('API_HASH')
-BOT_TOKEN = environ.get('BOT_TOKEN')# "5965090572:AAEaBQxjFwnaa2_g__n6nLmnKT7kZPq4sVU")
+API_ID = int(environ.get('API_ID',''))
+API_HASH = environ.get('API_HASH','')
+BOT_TOKEN = environ.get('BOT_TOKEN','')# "5965090572:AAEaBQxjFwnaa2_g__n6nLmnKT7kZPq4sVU")
 
 
 # Bot settings
@@ -45,7 +45,7 @@ NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
  
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb://bharath:bharath@ac-yzr3qto-shard-00-00.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-01.jsqhpvb.mongodb.net:27017,ac-yzr3qto-shard-00-02.jsqhpvb.mongodb.net:27017/?ssl=true&replicaSet=atlas-10hwrx-shard-0&authSource=admin&retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI','')
 DATABASE_NAME = environ.get('DATABASE_NAME', "bharath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Movies_file')
 
