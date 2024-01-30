@@ -263,7 +263,7 @@ async def start(client, message):
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", False)
         #g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
             b = await get_shortlink2(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", False)
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\n\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                         [
                             InlineKeyboardButton('📂ᴅɪʀᴇᴄᴛ ғɪʟᴇ [ɴᴏ ʟɪɴᴋ]', url=BUY_PREMIUM)
@@ -272,7 +272,7 @@ async def start(client, message):
                         ]
                     ]
                 )
-            )
+            ,disable_web_page_preview=True)
         await asyncio.sleep(300)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
@@ -288,7 +288,7 @@ async def start(client, message):
             
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
         b = await get_shortlink2(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\n\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
             [
                         [
                             InlineKeyboardButton('📂ᴅɪʀᴇᴄᴛ ғɪʟᴇ [ɴᴏ ʟɪɴᴋ]', url=BUY_PREMIUM)
@@ -297,7 +297,7 @@ async def start(client, message):
                         ]
                     ]
                 )
-                                         )
+                                     ,  disable_web_page_preview=True  )
         await asyncio.sleep(600)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
@@ -367,7 +367,7 @@ async def start(client, message):
             
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
             b = await get_shortlink2(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\n\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b><code>➤ {modified_file_name}</code>\nSɪᴢᴇ : {get_size(files.file_size)}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟷 : {g}\n\nᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 𝟸 : {b} \n\n\n<i>Note: ⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                         [
                             InlineKeyboardButton('📂ᴅɪʀᴇᴄᴛ ғɪʟᴇ [ɴᴏ ʟɪɴᴋ]', url=BUY_PREMIUM)
@@ -375,8 +375,8 @@ async def start(client, message):
                             InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ', url=await get_tutorial(chat_id))
                         ]
                     ]
-                )
-            )
+              )
+             ,disable_web_page_preview=True)
             await asyncio.sleep(1200)
             await k.edit("<b>Your message is successfully deleted!!!</b>")
             return
